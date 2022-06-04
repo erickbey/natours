@@ -1,0 +1,47 @@
+{
+  "name": "natours",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "start": "nodemon server.js",
+    "start:prod": "set NODE_ENV=production && nodemon server.js",
+    "debug": "ndb server.js",
+    "watch:js": "parcel watch ./public/javascript/index.js --out-dir ./public/javascript --out-file bundle.js --public-url /javascript",
+    "build:js": "parcel watch ./public/javascript/index.js --out-dir ./public/javascript --out-file bundle.js --public-url /javascript",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Erick Bey",
+  "license": "ISC",
+  "dependencies": {
+    "@babel/polyfill": "^7.12.1",
+    "@stripe/stripe-js": "^1.31.0",
+    "axios": "^0.27.2",
+    "bcryptjs": "^2.4.3",
+    "cookie-parser": "^1.4.6",
+    "cors": "^2.8.5",
+    "dotenv": "^16.0.1",
+    "express": "^4.18.1",
+    "express-mongo-sanitize": "^2.2.0",
+    "express-rate-limit": "^6.4.0",
+    "helmet": "^5.1.0",
+    "hpp": "^0.2.3",
+    "html-to-text": "^8.2.0",
+    "jsonwebtoken": "^8.5.1",
+    "mapbox-gl": "^2.8.2",
+    "mongoose": "^6.3.3",
+    "morgan": "^1.10.0",
+    "multer": "^1.4.5-lts.1",
+    "nodemailer": "^6.7.5",
+    "nodemon": "^2.0.16",
+    "pug": "^3.0.2",
+    "sharp": "^0.30.6",
+    "slugify": "^1.6.5",
+    "stripe": "^9.6.0",
+    "validator": "^13.7.0",
+    "xss-clean": "^0.1.1"
+  },
+  "devDependencies": {
+    "parcel-bundler": "^1.12.5"
+  }
+}
