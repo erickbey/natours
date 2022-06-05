@@ -9,6 +9,7 @@ const xss = require('xss-clean');
 const hpp = require('hpp');
 const path = require('path');
 const cookieParser = require('cookie-parser');
+const compression = require('compression');
 
 
 const tourRouter = require('./routes/tourRoutes');
@@ -73,6 +74,8 @@ app.use(xss());
 app.use(hpp({
     whitelist: ['duration', 'ratingsQuantity', 'ratingsAverage', 'maxGroupSize', 'difficulty', 'price']
 }));
+
+app.use(compression());
 
 // Serving static files
 app.use(express.static(path.join(__dirname, 'public')));
